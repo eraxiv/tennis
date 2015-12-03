@@ -15,7 +15,7 @@
     "scrape"
   ],
   "author": "eraxiv",
-  "license": "BSD-2-Clause",
+  "license": "mit",
   "bugs": {
     "url": "https://github.com/eraxiv/tennis/issues"
   }

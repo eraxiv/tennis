@@ -40,6 +40,7 @@ process.argv.forEach(function(val, index, array) {
 });
 
 
+
 //init();
 //getsummary(id, 'su');
 //getmatch(id);
@@ -466,9 +467,11 @@ function getmatch(id, e) {
 
         //get bets if any
         if (c.indexOf("bet365") > 0) {
-            bet = c.indexOf("bet365");
-            z.g1bet = c[bet + 1] ? c[bet + 1] : 0;
-            z.g2bet = c[bet + 2] ? c[bet + 2] : 0;
+            var pre = c.indexOf("Pre-match odds") > 0 ? c.indexOf("Pre-match odds") : 0;
+            bet = c.indexOf("bet365",pre);
+            
+            z.g1bet = parseFloat(c[bet + 1]) ? parseFloat(c[bet + 1]) : 0;
+            z.g2bet = parseFloat(c[bet + 2]) ? parseFloat(c[bet + 2]) : 0;
         }
 
         
@@ -520,6 +523,9 @@ function getmatch(id, e) {
         z.g2score = e.g2score || 0;
 
 
+
+
+
         //write
         db.collection(col).update(
             { '_id': id },
@@ -535,7 +541,7 @@ function getmatch(id, e) {
                 console.log('val: ' + val);       
                         
         });
-        
+       
         console.log('insert: ' + id);
 
 
