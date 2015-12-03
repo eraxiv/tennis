@@ -1,0 +1,22 @@
+{
+  "name": "tennis",
+  "version": "0.0.1",
+  "description": "Scrapes Tennis matches from flashscore.com.au and stores into mongodb",
+  "main": "tennis.js",
+  "scripts": {
+    "test": "node tennis.js i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eraxiv/tennis.git"
+  },
+  "keywords": [
+    "tennis",
+    "scrape"
+  ],
+  "author": "eraxiv",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/eraxiv/tennis/issues"
+  }
+}
